@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface MenusOrderDao {
     @Insert("insert into menus_order value (#{d_O_Id},#{d_M_Id},#{d_Num})")
-    int insertMenusOrder(MenusOrder menusOrder);
+    void insertMenusOrder(MenusOrder menusOrder);
 
     @Select("select * from menus_order order by d_o_id")
     List<MenusOrder> selectMenusOrder();

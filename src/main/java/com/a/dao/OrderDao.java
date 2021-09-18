@@ -14,7 +14,7 @@ public interface OrderDao {
     @Insert("insert into _order value (#{o_Id},#{o_T_Id},#{o_E_Id},#{o_Time},#{o_Price})")
     void insertOrder(Order customer);
 
-    void sumPrice(@Param("o_Id") Integer o_Id);
+    int sumPrice(@Param("o_Id") Integer o_Id);
 
 
     @Select("select * from _order")

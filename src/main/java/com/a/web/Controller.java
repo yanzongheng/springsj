@@ -2,12 +2,12 @@ package com.a.web;
 
 
 
-import com.a.entity.Customer;
+import com.a.entity.Menus;
 import com.a.entity.MenusOrder;
 import com.a.entity.Order;
 import com.a.entity.Table;
-import com.a.service.CustomerService;
 import com.a.service.MenusOrderService;
+import com.a.service.MenusService;
 import com.a.service.OrderService;
 import com.a.service.TableService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,28 +19,28 @@ import java.util.List;
 public class Controller {
 
     @Autowired
-    private CustomerService customer;
+    private MenusService menus;
 
 
-    @PostMapping("/insertCustomer")
-    public void insertCustomer1() {
-        Customer c = new Customer("F", "man", "555555", "1", "1");
-        customer.insertCustomer(c);
-    }
+//    @PostMapping("/insertCustomer")
+//    public void insertCustomer1() {
+//        Customer c = new Customer("F", "man", "555555", "1", "1");
+//        customer.insertCustomer(c);
+//    }
 
-    @GetMapping("/selectCustomer")
-    public List<Customer> selectCustomer1() {
-        List<Customer> c = customer.selectCustomer();
+    @GetMapping("/selectMenus")
+    public List<Menus> selectMenus1() {
+        List<Menus> c = menus.selectMenus();
 
         return c;
     }
 
-
-    @DeleteMapping("/deleteCustomer")
-    public void deleteCustomer1() {
-        customer.deleteCustomer(1);
-
-    }
+//
+//    @DeleteMapping("/deleteCustomer")
+//    public void deleteCustomer1() {
+//        customer.deleteCustomer(1);
+//
+//    }
 
 
     @Autowired
@@ -72,14 +72,13 @@ public class Controller {
     }
 
     @PostMapping("/insertOrder")
-    public void insertOrder1() {
-        Order order = new Order("1", "1", "1", "2000-1-1 19:00:50", "0");
+    public void insertOrder1(@RequestBody Order order) {
         orderService.insertOrder(order);
     }
 
-    @PutMapping("/sumPrice")
-    public void sumPrice1() {
-        orderService.sumPrice(1);
+    @GetMapping("/sumPrice")
+    public int sumPrice1() {
+        return orderService.sumPrice(1);
 
     }
 
@@ -91,11 +90,8 @@ public class Controller {
 
 
     @PostMapping("/insertMenusOrder")
-    public void insertMenusOrder1(){
-        MenusOrder menusOrder = new MenusOrder("1", "1", "1");
-        MenusOrder menusOrder1 = new MenusOrder("1", "2", "2");
+    public void insertMenusOrder1(@RequestBody MenusOrder menusOrder){
         menusOrderService.insertMenusOrder(menusOrder);
-        menusOrderService.insertMenusOrder(menusOrder1);
     }
 
     @GetMapping("/selectMenusOrder")

@@ -24,7 +24,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public void sumPrice(Integer integer) {
-        orderDao.sumPrice(integer);
+    public int sumPrice(Integer integer) {
+         return orderDao.sumPrice(integer);
     }
 }

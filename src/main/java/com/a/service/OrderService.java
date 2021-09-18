@@ -9,5 +9,5 @@ import java.util.List;
 public interface OrderService {
     List<Order> selectTable();
     void insertOrder(Order order);
-    void sumPrice(Integer integer);
+    int sumPrice(Integer integer);
 }
