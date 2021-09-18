@@ -77,7 +77,7 @@ public class Controller {
         orderService.insertOrder(order);
     }
 
-    @GetMapping("/sumPrice")
+    @PutMapping("/sumPrice")
     public void sumPrice1() {
         orderService.sumPrice(1);
 
