@@ -21,13 +21,9 @@ public class TableServiceImpl implements TableService {
     }
 
     @Override
-    public void updateTableYes() {
-        tableDao.updateTableYes();
+    public void updateTableYes(String s) {
+        tableDao.updateTableYes(s);
     }
 
-    @Override
-    public void updateTableNo() {
-        tableDao.updateTableNo();
 
-    }
 }

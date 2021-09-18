@@ -7,6 +7,6 @@ import java.util.List;
 public interface TableService {
 
     List<Table> selectTable();
-    void updateTableYes();
-    void updateTableNo();
+    void updateTableYes(String s);
+
 }

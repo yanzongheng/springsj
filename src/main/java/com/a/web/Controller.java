@@ -54,33 +54,32 @@ public class Controller {
         return t;
     }
 
-    @PutMapping("/updateTable")
-    public void updateTable() {
-        tableService.updateTableYes();
-        tableService.updateTableNo();
+    @PutMapping("/updateTable/{tableId}")
+    public void updateTable(@PathVariable("tableId") String tableId) {
+        tableService.updateTableYes(tableId);
     }
 
-
-    @Autowired
-    private OrderService orderService;
-
-    @GetMapping("/selectOrder")
-    public List<Order> selectOrder1() {
-        List<Order> t = orderService.selectTable();
-
-        return t;
-    }
-
-    @PostMapping("/insertOrder")
-    public void insertOrder1(@RequestBody Order order) {
-        orderService.insertOrder(order);
-    }
-
-    @GetMapping("/sumPrice")
-    public int sumPrice1() {
-        return orderService.sumPrice(1);
-
-    }
+//
+//    @Autowired
+//    private OrderService orderService;
+//
+//    @GetMapping("/selectOrder")
+//    public List<Order> selectOrder1() {
+//        List<Order> t = orderService.selectTable();
+//
+//        return t;
+//    }
+//
+//    @PostMapping("/insertOrder")
+//    public void insertOrder1(@RequestBody Order order) {
+//        orderService.insertOrder(order);
+//    }
+//
+//    @GetMapping("/sumPrice")
+//    public int sumPrice1() {
+//        return orderService.sumPrice(1);
+//
+//    }
 
 
 
