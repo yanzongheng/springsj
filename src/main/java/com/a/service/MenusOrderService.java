@@ -8,5 +8,5 @@ public interface MenusOrderService {
 
     void insertMenusOrder(List<MenusOrder> menusOrders);
 
-    List<MenusOrder> selectMenusOrder(String tableId);
+    int sumPrice(String tableId);
 }

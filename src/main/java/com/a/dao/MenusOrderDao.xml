@@ -7,4 +7,12 @@
             (#{item.d_t_Id},#{item.d_m_Id},#{item.d_num})
         </foreach>
     </insert>
+
+    <select id="sumPrice" resultType="java.lang.Integer">
+select sum(e.m_price * w.d_num)
+from menus_order w,
+     menus e
+where w.d_m_id = e.m_id
+  and w.d_t_id = #{tableId}
+    </select>
 </mapper>

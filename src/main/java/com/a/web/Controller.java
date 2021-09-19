@@ -92,6 +92,11 @@ public class Controller {
 
     }*/
 
+    @GetMapping("/sumPrice/{tableId}")
+    public int sumPrice(@PathVariable("tableId") String tableId){
+        return menusOrderService.sumPrice(tableId);
+    }
+
     @Autowired
     private MenusOrderAndMenusService menusOrderAndMenusService;
     @GetMapping("/selectMenusOrderById/{tableId}")

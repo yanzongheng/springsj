@@ -22,7 +22,9 @@ public class MenusOrderServiceImpl implements MenusOrderService {
     }
 
     @Override
-    public List<MenusOrder> selectMenusOrder(String tableId) {
-        return menusOrderDao.selectMenusOrder(tableId);
+    public int sumPrice(String tableId) {
+        return menusOrderDao.sumPrice(tableId);
     }
+
+
 }
