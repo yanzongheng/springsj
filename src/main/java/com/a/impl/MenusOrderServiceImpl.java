@@ -15,12 +15,12 @@ public class MenusOrderServiceImpl implements MenusOrderService {
     private MenusOrderDao menusOrderDao;
 
     @Override
-    public void insertMenusOrder(MenusOrder menusOrder) {
-        menusOrderDao.insertMenusOrder(menusOrder);
+    public void insertMenusOrder(List<MenusOrder> menusOrders) {
+        menusOrderDao.insertMenusOrder(menusOrders);
     }
 
     @Override
-    public List<MenusOrder> selectMenusOrder() {
-        return menusOrderDao.selectMenusOrder();
+    public List<MenusOrder> selectMenusOrder(String tableId) {
+        return menusOrderDao.selectMenusOrder(tableId);
     }
 }

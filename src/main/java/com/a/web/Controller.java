@@ -87,17 +87,14 @@ public class Controller {
 
 
     @PostMapping("/insertMenusOrder")
-    public void insertMenusOrder1(@RequestBody MenusOrder menusOrder){
-        menusOrderService.insertMenusOrder(menusOrder);
+    public void insertMenusOrder1(@RequestBody List<MenusOrder> menusOrders){
+        menusOrderService.insertMenusOrder(menusOrders);
     }
 
-    @GetMapping("/selectMenusOrder")
-    public List<MenusOrder> selectMenusOrder1(){
-        List<MenusOrder> menusOrders = menusOrderService.selectMenusOrder();
+    @GetMapping("/selectMenusOrder/{tableId}")
+    public List<MenusOrder> selectMenusOrder1(@PathVariable("tableId") String tableId){
+        List<MenusOrder> menusOrders = menusOrderService.selectMenusOrder(tableId);
         return menusOrders;
 
     }
-
-
-
 }

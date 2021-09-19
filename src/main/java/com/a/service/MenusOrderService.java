@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface MenusOrderService {
 
-    void insertMenusOrder(MenusOrder menusOrder);
+    void insertMenusOrder(List<MenusOrder> menusOrders);
 
-    List<MenusOrder> selectMenusOrder();
+    List<MenusOrder> selectMenusOrder(String tableId);
 }

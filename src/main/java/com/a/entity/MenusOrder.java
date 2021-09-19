@@ -3,46 +3,40 @@ package com.a.entity;
 
 public class MenusOrder {
 
-  private String d_O_Id;
-  private String d_M_Id;
-  private String d_Num;
+    private String d_t_Id;
+    private String d_m_Id;
+    private String d_num;
 
-  @Override
-  public String toString() {
-    return "MenusOrder{" +
-            "订单编号='" + d_O_Id + '\'' +
-            ", 菜品编号='" + d_M_Id + '\'' +
-            ", 数量='" + d_Num + '\'' +
-            '}';
-  }
+    public MenusOrder(String d_t_Id, String d_m_Id, String d_num) {
+        this.d_t_Id = d_t_Id;
+        this.d_m_Id = d_m_Id;
+        this.d_num = d_num;
+    }
 
-  public String getD_O_Id() {
-    return d_O_Id;
-  }
+    public MenusOrder() {
+    }
 
-  public void setD_O_Id(String d_O_Id) {
-    this.d_O_Id = d_O_Id;
-  }
+    public String getD_t_Id() {
+        return d_t_Id;
+    }
 
-  public String getD_M_Id() {
-    return d_M_Id;
-  }
+    public void setD_t_Id(String d_t_Id) {
+        this.d_t_Id = d_t_Id;
+    }
 
-  public void setD_M_Id(String d_M_Id) {
-    this.d_M_Id = d_M_Id;
-  }
+    public String getD_m_Id() {
+        return d_m_Id;
+    }
 
-  public String getD_Num() {
-    return d_Num;
-  }
+    public void setD_m_Id(String d_m_Id) {
+        this.d_m_Id = d_m_Id;
+    }
 
-  public void setD_Num(String d_Num) {
-    this.d_Num = d_Num;
-  }
+    public String getD_num() {
+        return d_num;
+    }
 
-  public MenusOrder(String d_O_Id, String d_M_Id, String d_Num) {
-    this.d_O_Id = d_O_Id;
-    this.d_M_Id = d_M_Id;
-    this.d_Num = d_Num;
-  }
+    public void setD_num(String d_num) {
+        this.d_num = d_num;
+    }
 }
