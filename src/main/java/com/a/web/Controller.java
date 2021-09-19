@@ -87,8 +87,11 @@ public class Controller {
 
 
     @PostMapping("/insertMenusOrder")
-    public void insertMenusOrder1(@RequestBody MenusOrder menusOrder){
-        menusOrderService.insertMenusOrder(menusOrder);
+    public void insertMenusOrder1(@RequestBody MenusOrder[] menusOrder){
+        for (MenusOrder m:menusOrder) {
+            menusOrderService.insertMenusOrder(m);
+
+        }
     }
 
     @GetMapping("/selectMenusOrder")
