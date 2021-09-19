@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.a.dao.MenusOrderDao">
-    <insert id="insertMenusOrder" parameterType="java.util.List">
-        insert into menus_order values
-        <foreach collection="java.util.List" open="(" close=")" item="item" separator=",">
-            <if test="item.d_num != 0">
-                #{item.d_t_Id},#{item.d_m_Id},#{item.d_num}
-            </if>
+    <insert id="insertMenusOrder" parameterType="list">
+        INSERT INTO menus_order(d_t_Id,d_m_Id,d_num) VALUES
+        <foreach collection="list" separator="," item="item">
+            (#{item.d_t_Id},#{item.d_m_Id},#{item.d_num})
         </foreach>
     </insert>
 </mapper>

@@ -75,14 +75,6 @@ public class Controller {
 //        orderService.insertOrder(order);
 //    }
 //
-//    @GetMapping("/sumPrice")
-//    public int sumPrice1() {
-//        return orderService.sumPrice(1);
-//
-//    }
-
-
-
 
     @Autowired
     private MenusOrderService menusOrderService;
@@ -93,12 +85,12 @@ public class Controller {
         menusOrderService.insertMenusOrder(menusOrders);
     }
 
-    @GetMapping("/selectMenusOrder/{tableId}")
+    /*@GetMapping("/selectMenusOrder/{tableId}")
     public List<MenusOrder> selectMenusOrder1(@PathVariable("tableId") String tableId){
         List<MenusOrder> menusOrders = menusOrderService.selectMenusOrder(tableId);
         return menusOrders;
 
-    }
+    }*/
 
     @Autowired
     private MenusOrderAndMenusService menusOrderAndMenusService;

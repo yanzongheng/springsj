@@ -1,29 +1,15 @@
 package com.a.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Table {
 
-  private String tid;
-  private Boolean tstatus;
+  private String t_id;
+  private Boolean t_status;
 
-  public String getTid() {
-    return tid;
-  }
-
-  public void setTid(String tid) {
-    this.tid = tid;
-  }
-
-  public Boolean getTstatus() {
-    return tstatus;
-  }
-
-  public void setTstatus(Boolean tstatus) {
-    this.tstatus = tstatus;
-  }
-
-  public Table(String tid, Boolean tstatus) {
-    this.tid = tid;
-    this.tstatus = tstatus;
-  }
 }
