@@ -3,35 +3,27 @@ package com.a.entity;
 
 public class Table {
 
-  private String t_id;
-  private Boolean t_status;
+  private String tid;
+  private Boolean tstatus;
 
-  @Override
-  public String toString() {
-    return "Table{" +
-            "桌子编号='" + t_id + '\'' +
-            ", 状态='" + t_status + '\'' +
-            '}';
+  public String getTid() {
+    return tid;
   }
 
-  public String getT_id() {
-    return t_id;
+  public void setTid(String tid) {
+    this.tid = tid;
   }
 
-  public void setT_id(String t_id) {
-    this.t_id = t_id;
+  public Boolean getTstatus() {
+    return tstatus;
   }
 
-  public Boolean getT_Status() {
-    return t_status;
+  public void setTstatus(Boolean tstatus) {
+    this.tstatus = tstatus;
   }
 
-  public void setT_Status(Boolean t_Status) {
-    this.t_status = t_Status;
-  }
-
-  public Table(String t_id, Boolean t_status) {
-    this.t_id = t_id;
-    this.t_status = t_status;
+  public Table(String tid, Boolean tstatus) {
+    this.tid = tid;
+    this.tstatus = tstatus;
   }
 }

@@ -4,7 +4,9 @@ package com.a.web;
 
 import com.a.entity.Menus;
 import com.a.entity.MenusOrder;
+import com.a.entity.MenusOrderAndMenus;
 import com.a.entity.Table;
+import com.a.service.MenusOrderAndMenusService;
 import com.a.service.MenusOrderService;
 import com.a.service.MenusService;
 import com.a.service.TableService;
@@ -94,6 +96,15 @@ public class Controller {
     @GetMapping("/selectMenusOrder/{tableId}")
     public List<MenusOrder> selectMenusOrder1(@PathVariable("tableId") String tableId){
         List<MenusOrder> menusOrders = menusOrderService.selectMenusOrder(tableId);
+        return menusOrders;
+
+    }
+
+    @Autowired
+    private MenusOrderAndMenusService menusOrderAndMenusService;
+    @GetMapping("/selectMenusOrderById/{tableId}")
+    public List<MenusOrderAndMenus> selectMenusOrderById1(@PathVariable("tableId") String tableId){
+        List<MenusOrderAndMenus> menusOrders = menusOrderAndMenusService.selectMenusOrder(tableId);
         return menusOrders;
 
     }
