@@ -93,7 +93,7 @@ public class Controller {
     }*/
 
     @GetMapping("/sumPrice/{tableId}")
-    public int sumPrice(@PathVariable("tableId") String tableId){
+    public String sumPrice(@PathVariable("tableId") String tableId){
         return menusOrderService.sumPrice(tableId);
     }
 

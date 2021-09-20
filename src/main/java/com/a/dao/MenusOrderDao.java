@@ -15,5 +15,5 @@ public interface MenusOrderDao {
     @Select("select * from menus_order where d_t_id = #{tableId}")
     List<MenusOrder> selectMenusOrder(@Param("tableId")String tableId);
 
-    int sumPrice(@Param("tableId")String tableId);
+    String sumPrice(@Param("tableId")String tableId);
 }
