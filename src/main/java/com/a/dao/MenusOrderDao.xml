@@ -8,7 +8,7 @@
         </foreach>
     </insert>
 
-    <select id="sumPrice" resultType="java.lang.Integer">
+    <select id="sumPrice" resultType="java.lang.String">
 select sum(e.m_price * w.d_num)
 from menus_order w,
      menus e
